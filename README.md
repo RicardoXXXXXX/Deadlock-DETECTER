@@ -9,7 +9,7 @@ need to be terminated to resolve deadlock(s).
 
 -c identify it deadlock breaking is required. Once input -c, all process will be re-scheduled to avoid deadlock.
 
-#Example:
+### Example:
 Resourc.txt:
 
 Time| Process id | Lock file 1| Lock file 2 |

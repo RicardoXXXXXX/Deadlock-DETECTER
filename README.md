@@ -2,9 +2,11 @@
 
 ## Basic command
 -f filename specifies the path to the file describing requests.
+
 -e is an optional parameter, which when provided requires your code to compute execution time. If this
 option is not given, your code should identify presence or absence of deadlocks and which processes
 need to be terminated to resolve deadlock(s).
+
 -c identify it deadlock breaking is required. Once input -c, all process will be re-scheduled to avoid deadlock.
 
 #Example:
@@ -21,8 +23,10 @@ Time| Process id | Lock file 1| Lock file 2 |
 Input: "./detect resources.txt -c"
 
 Output: 
-0 0 1,2\n  `0(Time) 0(Process id) 1(Lock file 1),2(Lock file 2) ` 
-0 2 3,4\n
-1 1 2,3\n
-1 3 4,1\n
-Simulation time 2\n
+Time| Process id | Lock file 1| Lock file 2 |
+--- | --- | --- | --- |
+0 |      0     |      1     |       2     | 
+0 |      2     |      3     |       4     |
+1 |      1     |      2     |       3     |
+1 |      3     |      4     |       1     |
+Simulation time 2\n`

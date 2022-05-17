@@ -11,7 +11,7 @@ need to be terminated to resolve deadlock(s).
 Resourc.txt:
 
 Time| Process id | Lock file 1| Lock file 2 |
---------------------------------------------
+--- | --- | --- | --- |
 (1) |      0     |      1     |       2     | 
 (2) |      1     |      2     |       3     |
 (3) |      2     |      3     |       4     |
@@ -19,6 +19,7 @@ Time| Process id | Lock file 1| Lock file 2 |
 
 
 Input: "./detect resources.txt -c"
+
 Output: 
 0 0 1,2\n  `0(Time) 0(Process id) 1(Lock file 1),2(Lock file 2) ` 
 0 2 3,4\n
